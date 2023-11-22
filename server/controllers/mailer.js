@@ -21,7 +21,7 @@ var mailGenerator = new Mailgen({
   product: {
     // Appears in header & footer of e-mails
     name: "LoginAuth",
-    link: "https://loginauthsys.vercel.app/",
+    link: "https://loginauth-sys.onrender.com/",
     // Optional product logo
     // logo: 'https://mailgen.js/img/logo.png'
   },
@@ -47,7 +47,7 @@ const verifyMailer = async (req, res) => {
           button: {
             color: "#22BC66", // Optional action button color
             text: "Confirm your account",
-            link: "http://localhost:5173/verifymail?id=" + id + "",
+            link: "https://loginauth-sys.onrender.com/verifymail?id=" + id + "",
           },
         },
       },
@@ -94,7 +94,7 @@ const resetMailer = async (req, res) => {
           button: {
             color: "#22BC66", // Optional action button color
             text: "Reset Password",
-            link: "http://localhost:5173/resetpass?id=" + user._id + "",
+            link: "https://loginauth-sys.onrender.com/resetpass?id=" + user._id + "",
           },
         },
       },

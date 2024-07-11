@@ -7,11 +7,11 @@ const userSchema = new Schema({
         type: String,
         required: true
     },
-    // username:{
-    //     type: String,
-    //     required: true,
-    //     unique: true
-    // },
+    username:{
+        type: String,
+        required: true,
+        unique: true
+    },
     email:{
         type: String,
         required: true,
@@ -22,9 +22,9 @@ const userSchema = new Schema({
         required: true
     },
     is_verified: {
-        type: Number,
+        type: Boolean,
         required: true,
-        default: 0
+        default: false
     },
 }, {timestamps: true})
 

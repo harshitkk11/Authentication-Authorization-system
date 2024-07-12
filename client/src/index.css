@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: nextask-regular;
-  src: url(../public/nextask-hind-regular.ttf);
+  src: url(/nextask-hind-regular.ttf);
 }
 
 html {

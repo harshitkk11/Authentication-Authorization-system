@@ -14,7 +14,7 @@ const ResetMail = async (req, res, next) => {
                 next()
                 return
             }
-            
+
             return res.status(200).json({ error: "This email address is not verified" });
         }
 
@@ -48,7 +48,7 @@ const ResetMailer = async (req, res) => {
                     button: {
                         color: "#3498db", // Optional action button color
                         text: "Reset Password",
-                        link: "http://localhost:5173/reset?t=" + token + "",
+                        link: `${process.env.ORIGIN_VALUE}/reset?t=${token}`,
                     },
                 },
             },
@@ -66,6 +66,8 @@ const ResetMailer = async (req, res) => {
         transporter.sendMail(mailOptions, (err, data) => {
             if (err) {
                 console.log("Error " + err);
+                return res.status(400).json("Something went wrong!!");
+
             } else {
                 console.log("Email sent successfully");
                 return res.status(200).json({ message: "Reset email sent" });

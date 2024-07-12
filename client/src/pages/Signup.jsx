@@ -19,6 +19,7 @@ const Signup = () => {
   });
 
   const [status, setStatus] = useState({
+    bg: "",
     color: "",
     message: "",
   });
@@ -46,7 +47,8 @@ const Signup = () => {
       if (res && !res.error) {
         if (res.message === "Signed up successfully") {
           setStatus({
-            color: "secondary",
+            bg: "secondary",
+            color: "secondary-light",
             message:
               "Registration successfull. Please check your inbox for a verification email to confirm your email address.",
           });
@@ -72,7 +74,8 @@ const Signup = () => {
           });
         } else {
           setStatus({
-            color: "disabled",
+            bg: "error-background",
+            color: "error",
             message: res.message,
           });
         }
@@ -81,6 +84,7 @@ const Signup = () => {
       }
     } catch (error) {
       setStatus({
+        bg: "error-background",
         color: "error",
         message: "Something went wrong!!",
       });
@@ -152,9 +156,9 @@ const Signup = () => {
         </p>
       </div>
       <div className="mt-3 sm:mt-5 sm:mx-auto w-full sm:max-w-sm flex flex-col gap-5 px-3 sm:px-0">
-        <p
+      <p
           className={`text-lg px-4 text-center rounded-lg bg-opacity-65 bg-${
-            status.color
+            status.bg
           } text-${status.color} ${
             status.message ? "visible py-2" : "invisible py-0"
           }`}

@@ -20,7 +20,7 @@ const mailGenerator = new Mailgen({
     product: {
         // Appears in header & footer of e-mails
         name: "LoginAuth",
-        link: "https://loginauth-sys.onrender.com/",
+        link: process.env.ORIGIN_VALUE,
         // Optional product logo
         // logo: 'https://mailgen.js/img/logo.png'
     },

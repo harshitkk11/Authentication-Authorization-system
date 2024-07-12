@@ -68,7 +68,7 @@ const verifyMailer = async (req, res) => {
           button: {
             color: "#3498db", // Optional action button color
             text: "Confirm your account",
-            link: "http://localhost:5173/verify?t=" + token + "",
+            link: `${process.env.ORIGIN_VALUE}/verify?t=${token}`,
           },
         },
       },
@@ -86,6 +86,7 @@ const verifyMailer = async (req, res) => {
     transporter.sendMail(mailOptions, ((err, data) => {
       if (err) {
         console.log("Error " + err);
+        return res.status(400).json("Something went wrong!!");
       } else {
         console.log("Email sent successfully");
         return res.status(200).json({

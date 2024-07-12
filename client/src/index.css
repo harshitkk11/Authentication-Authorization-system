@@ -3,12 +3,8 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'custom-font';
-  src: url('Hind-Regular.woff2') format('woff2'),
-      url('Hind-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+  font-family: nextask-regular;
+  src: url(../public/nextask-hind-regular.ttf);
 }
 
 html {
@@ -31,7 +27,7 @@ html {
 body {
   min-height: 100vh;
   min-width: fit-content;
-  font-family: "custom-font", sans-serif;
+  font-family: "nextask-regular", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* overflow-y: hidden; */

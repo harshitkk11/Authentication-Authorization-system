@@ -18,7 +18,7 @@ This project is a web application designed to manage user authentication and aut
 - **Responsive Design:** User interface adapts to various screen sizes.
 
 ### Technologies Used
-- **Frontend:** React, JavaScript, HTML, CSS
+- **Frontend:** React, JavaScript, HTML, Tailwind CSS
 - **Backend:** Node.js, Express.js
 - **Database:** MongoDB
 - **Libraries:**

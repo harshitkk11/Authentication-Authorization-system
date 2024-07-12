@@ -12,13 +12,7 @@ const PORT = process.env.PORT;
 
 const app = express();
 
-const corsOptions = {
-  origin: process.env.ORIGIN_VALUE, // Allow only requests from this origin
-  methods: 'GET,POST', // Allow only these methods
-  allowedHeaders: ['Content-Type', 'Authorization'] // Allow only these headers
-};
-
-app.use(cors(corsOptions))
+app.use(cors({ credentials: true, origin: process.env.ORIGIN_VALUE }))
 
 app.use(bodyParser.json({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));

@@ -19,7 +19,7 @@ const Dashboard = () => {
     <div className="w-full h-[100vh] bg-primary text-white flex flex-col justify-center items-center gap-8 p-10">
       {userData.username && (
         <>
-          <h1 className="text-[4rem] sm:text-9xl font-extrabold">
+          <h1 className="text-[4rem] sm:text-9xl font-extrabold text-center">
             {userData.name}
           </h1>
           <p className="text-lg sm:text-3xl font-medium opacity-75 text-center">
